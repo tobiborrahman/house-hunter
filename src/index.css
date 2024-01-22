@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		padding: 0;
+		margin: 0;
+		font-family: -apple-system, 'Outfit', 'Roboto', sans-serif,
+			'Atyp Display', Proxima Nova, system-ui, BlinkMacSystemFont,
+			Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+			Helvetica Neue, sans-serif;
+		scroll-behavior: smooth;
+		box-sizing: border-box;
+		background-color: #ffffff;
+		font-family: 'Roboto', sans-serif;
+		overflow-x: hidden;
+		min-height: 901px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@layer components {
+	.custom-container {
+		@apply 'max-w-[1280x] mx-auto px-[30px] lg:px-5 sm:px-[15px]';
+	}
+}
