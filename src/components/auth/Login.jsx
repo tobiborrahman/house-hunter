@@ -1,8 +1,10 @@
+import { jwtDecode } from 'jwt-decode';
 import { useForm } from 'react-hook-form';
 import 'react-phone-number-input/style.css';
+import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
-	// Example usage:
+const Login = () => {
+	const navigate = useNavigate();
 
 	const {
 		register,
@@ -12,7 +14,6 @@ const Register = () => {
 	} = useForm();
 
 	const onSubmit = async (data) => {
-		console.log(data);
 		fetch('http://localhost:5000/login', {
 			method: 'POST',
 			headers: {
@@ -22,8 +23,24 @@ const Register = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				reset;
-				console.log('from register', data);
+				reset();
+				console.log('from login data', data);
+				const token = data.token;
+
+				// Decode the JWT token to get user role
+				const decodedToken = jwtDecode(token);
+				console.log('decodedToken', decodedToken);
+				const userRole = decodedToken.role;
+
+				// Store the token in local storage
+				localStorage.setItem('token', token);
+
+				// Redirect based on user role
+				if (userRole === 'owner') {
+					navigate('/owner-dashboard');
+				} else if (userRole === 'renter') {
+					navigate('/renter-dashboard');
+				}
 			});
 	};
 
@@ -56,4 +73,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default Login;
