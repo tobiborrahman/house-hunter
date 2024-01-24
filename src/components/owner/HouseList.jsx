@@ -4,7 +4,7 @@ const HouseList = () => {
 	const [houses, setHouses] = useState([]);
 
 	// useEffect(() => {
-	// 	fetch('http://localhost:5000/owner-dashboard')
+	// 	fetch('https://house-hunter-server-inky.vercel.app/owner-dashboard')
 	// 		.then((res) => res.json())
 	// 		.then((data) => {
 	// 			console.log(data);
@@ -21,7 +21,7 @@ const HouseList = () => {
 			return;
 		}
 
-		fetch('http://localhost:5000/owner-dashboard', {
+		fetch('https://house-hunter-server-inky.vercel.app/owner-dashboard', {
 			headers: {
 				Authorization: `Bearer ${token}`,
 			},

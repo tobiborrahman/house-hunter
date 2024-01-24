@@ -5,7 +5,7 @@ import SingleHouse from './SingleHouse';
 const HousesCard = () => {
 	const [houses, setHouses] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:5000/all-houses')
+		fetch('https://house-hunter-server-inky.vercel.app/all-houses')
 			.then((res) => res.json())
 			.then((data) => {
 				// console.log(data);

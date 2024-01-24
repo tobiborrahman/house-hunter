@@ -13,7 +13,7 @@ const AddHouse = () => {
 		const token = localStorage.getItem('token');
 		console.log(token);
 
-		fetch('http://localhost:5000/add-house', {
+		fetch('https://house-hunter-server-inky.vercel.app/add-house', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

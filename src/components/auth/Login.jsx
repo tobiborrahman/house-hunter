@@ -14,7 +14,7 @@ const Login = () => {
 	} = useForm();
 
 	const onSubmit = async (data) => {
-		fetch('http://localhost:5000/login', {
+		fetch('https://house-hunter-server-inky.vercel.app/login', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',

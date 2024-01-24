@@ -15,7 +15,7 @@ const Register = () => {
 
 	const onSubmit = async (data) => {
 		console.log(data);
-		fetch('http://localhost:5000/register', {
+		fetch('https://house-hunter-server-inky.vercel.app/register', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',
