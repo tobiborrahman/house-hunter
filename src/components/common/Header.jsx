@@ -26,26 +26,22 @@ const Navbar = () => {
 
 	return (
 		<section
-			className={`container mx-auto bg-gray-800 flex justify-between items-center  w-full px-3 ${
-				scrolling
-					? ' text-white shadow-sm px-3 dark:bg-[#161C2D] dark:shadow-b-md'
-					: 'bg-transparent'
-			} md:px-20 z-50 md:opacity-100 py-5 transition-all duration-300`}
+			className={`container mx-auto bg-gray-800 flex justify-between items-center  w-full px-3 md:px-20 text-white z-50 md:opacity-100 py-5 transition-all duration-300`}
 		>
 			<div>
-				<h1 className="text-3xl font-bold">TOBIBOR.</h1>
+				<h1 className="text-3xl font-bold">HOUSE HUNTER</h1>
 			</div>
 			<div className="md:flex justify-center items-center">
 				<ul className="hidden md:menu-horizontal gap-8 px-1 font-semibold mr-4">
 					<Link
 						to="/login"
-						className="text-md font-medium text-black dark:text-gray-400 dark:hover:text-white hover:text-[#F59E0B]"
+						className="text-md font-medium text-white dark:text-gray-500 dark:hover:text-white hover:text-[#ffb5a7]"
 					>
 						Login
 					</Link>
 					<Link
 						to="/register"
-						className="text-md font-medium text-black dark:text-gray-400 dark:hover:text-white hover:text-[#F59E0B]"
+						className="text-md font-medium text-white dark:text-gray-500 dark:hover:text-white hover:text-[#ffb5a7]"
 					>
 						Register
 					</Link>
