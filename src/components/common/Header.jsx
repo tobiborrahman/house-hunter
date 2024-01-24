@@ -30,7 +30,7 @@ const Navbar = () => {
 				scrolling
 					? ' text-white shadow-sm px-3 dark:bg-[#161C2D] dark:shadow-b-md'
 					: 'bg-transparent'
-			} md:px-20 z-50 md:opacity-100 py-5 transition-all duration-300 mb-10 `}
+			} md:px-20 z-50 md:opacity-100 py-5 transition-all duration-300`}
 		>
 			<div>
 				<h1 className="text-3xl font-bold">TOBIBOR.</h1>
