@@ -13,8 +13,8 @@ const HousesCard = () => {
 			});
 	}, []);
 	return (
-		<div className="mx-20 my-20">
-			<h1 className="text-center text-[48px] font-semibold py-32">
+		<div className="md:mx-20 my-20">
+			<h1 className="text-center text-[48px] font-semibold pb-16">
 				Book Your Favorite House
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
